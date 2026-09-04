@@ -43,4 +43,6 @@ Open `http://127.0.0.1:4180`.
 
 This repository must not manufacture RC evidence. The final external proof JSON is generated only after the required Web/iOS/Android traces and all MASTER-25 negative/security gates have actually passed. Generated evidence is intentionally not source authority.
 
+The MASTER-25R external proof was operator-reported green on the exact pinned Vira checkout after the contract proof, real Chromium proof, iOS Simulator proof, Android Emulator proof, and final fail-closed evidence generation all completed successfully. The generated trace/evidence files remain intentionally ignored by Git.
+
 This is an internal product demonstration and is not an official Pegasus Airlines application. It has no commercial Pegasus inventory, payment, PNR or ticketing API access; the demo stops truthfully at the airline checkout handoff boundary.
