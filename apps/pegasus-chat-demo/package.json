@@ -1,0 +1,42 @@
+{
+  "name": "@vira-enterprise-genui/pegasus-chat-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1 --port 4180",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1 --port 4180",
+    "typecheck": "tsc6 --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "4.0.46",
+    "@ai-sdk/react": "4.0.80",
+    "@assistant-ui/ai-sdk": "0.0.2",
+    "@assistant-ui/react": "0.15.17",
+    "@assistant-ui/react-markdown": "0.14.13",
+    "@vira-enterprise-genui/adapter-sdk": "workspace:*",
+    "@vira-enterprise-genui/airline-brand-kit": "workspace:*",
+    "@vira-enterprise-genui/composer": "workspace:*",
+    "@vira-enterprise-genui/genui": "workspace:*",
+    "@vira-enterprise-genui/mock-airline-domain": "workspace:*",
+    "@vira-enterprise-genui/planner": "workspace:*",
+    "@vira-enterprise-genui/protocol": "workspace:*",
+    "@vira-enterprise-genui/react": "workspace:*",
+    "@vira-enterprise-genui/runtime-core": "workspace:*",
+    "@vira-enterprise-genui/runtime-web": "workspace:*",
+    "ai": "7.0.77",
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@typescript/typescript6": "6.0.2",
+    "typescript": "7.0.2"
+  }
+}

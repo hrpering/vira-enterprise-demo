@@ -1,0 +1,161 @@
+.vira-experience {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e2e4e9;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(23, 31, 51, 0.07);
+  color: #111827;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.vira-region { width: 100%; }
+.vira-region + .vira-region { border-top: 1px solid #eceef1; }
+
+.standalone-brand-component {
+  width: 100%;
+  margin: 0;
+}
+
+.vira-search-card {
+  padding: 18px;
+  display: grid;
+  gap: 13px;
+  background: #fff;
+}
+
+.vira-route-grid {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  align-items: end;
+  gap: 8px;
+}
+
+.vira-search-card label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vira-search-card label > span {
+  color: #858b98;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.vira-search-card input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dde0e6;
+  border-radius: 11px;
+  outline: none;
+  background: #fafbfc;
+  color: #131b30;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.vira-search-card input:focus {
+  border-color: #d1b300;
+  box-shadow: 0 0 0 3px rgba(255, 213, 0, .12);
+}
+
+.vira-route-arrow {
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #9aa0ab;
+  font-size: 18px;
+}
+
+.vira-search-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.vira-primary-button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffd500;
+  color: #16203a;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.vira-results-card {
+  padding: 17px 18px 18px;
+  background: #fafbfc;
+}
+
+.vira-results-head {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.vira-results-head strong { color: #151d31; font-size: 13px; }
+.vira-results-head span { color: #8a909b; font-size: 11px; }
+.vira-flight-list { display: grid; gap: 8px; }
+
+.vira-flight-row {
+  display: grid;
+  grid-template-columns: minmax(210px, 1.6fr) minmax(90px, .8fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 13px 13px 15px;
+  border: 1px solid #e4e6eb;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.vira-flight-row:hover { border-color: #d4c36d; }
+.vira-flight-row.selected { border-color: #c6a900; box-shadow: 0 0 0 2px rgba(255, 213, 0, .18); }
+
+.vira-flight-time {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.vira-flight-time strong { color: #15203a; font-size: 16px; }
+.vira-flight-time span { min-width: 70px; text-align: center; color: #8d939e; font-size: 10px; white-space: nowrap; }
+.vira-flight-meta { display: flex; flex-direction: column; gap: 3px; }
+.vira-flight-meta strong { color: #414858; font-size: 11px; }
+.vira-flight-meta span { color: #989eaa; font-size: 10px; }
+.vira-flight-badge { width: fit-content; padding: 3px 6px; border-radius: 999px; background: #fff3ad; color: #705d00; font-size: 8px; }
+.vira-flight-pricebox { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+.vira-flight-pricebox > span { color: #8a909b; font-size: 9px; }
+
+.vira-price-button {
+  min-width: 84px;
+  height: 38px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #17213c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.vira-flight-row.selected .vira-price-button { background: #ffd500; color: #17213c; }
+
+@media (max-width: 720px) {
+  .vira-route-grid { grid-template-columns: 1fr 26px 1fr; }
+  .vira-flight-row { grid-template-columns: 1fr auto; }
+  .vira-flight-meta { display: none; }
+  .vira-flight-time strong { font-size: 14px; }
+}
