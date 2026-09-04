@@ -42,3 +42,7 @@ The proof must never float to `main`, a branch head, `latest`, or an unpinned pa
 `evidence/generated/` and `evidence/external-brand-proof.json` are intentionally ignored by Git. They are local execution artifacts, not reviewable source declarations. A committed JSON file containing `passed: true` is not accepted as proof.
 
 The final evidence is valid only for the exact Vira HEAD recorded in the file. The core verifier independently compares that value with its current Git checkout.
+
+## MASTER-25R local result
+
+The complete external proof chain was operator-reported PASS on the exact pinned Vira checkout, including the contract proof, real Chromium proof, iOS Simulator proof, Android Emulator proof, and final fail-closed evidence generation. This line records execution evidence only; it does not replace the generated evidence consumed by the core RC verifier.
