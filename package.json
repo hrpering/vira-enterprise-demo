@@ -11,8 +11,12 @@
     "bootstrap:vira": "node tooling/bootstrap-vira.mjs",
     "typecheck": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo typecheck",
     "test": "vitest run packages/mock-airline-domain/src/index.test.ts tests",
+    "test:proof": "vitest run tests/proof",
     "build": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo build",
     "verify": "pnpm typecheck && pnpm test && pnpm build",
+    "proof:contract": "pnpm test:proof",
+    "proof:evidence": "node tooling/build-external-brand-proof.mjs",
+    "verify:external-proof": "pnpm proof:contract && pnpm proof:evidence",
     "dev": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo dev"
   },
   "devDependencies": {
