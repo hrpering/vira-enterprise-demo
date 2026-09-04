@@ -10,16 +10,22 @@
   "scripts": {
     "bootstrap:vira": "node tooling/bootstrap-vira.mjs",
     "typecheck": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo typecheck",
-    "test": "vitest run packages/mock-airline-domain/src/index.test.ts tests",
+    "test": "vitest run packages/mock-airline-domain/src/index.test.ts tests/proof",
     "test:proof": "vitest run tests/proof",
     "build": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo build",
     "verify": "pnpm typecheck && pnpm test && pnpm build",
     "proof:contract": "pnpm test:proof",
+    "proof:web": "node tooling/run-web-proof.mjs",
+    "proof:ios": "node tooling/run-ios-proof.mjs",
+    "proof:android": "node tooling/run-android-proof.mjs",
+    "proof:platforms": "pnpm proof:web && pnpm proof:ios && pnpm proof:android",
     "proof:evidence": "node tooling/build-external-brand-proof.mjs",
-    "verify:external-proof": "pnpm proof:contract && pnpm proof:evidence",
+    "verify:external-proof": "pnpm proof:contract && pnpm proof:platforms && pnpm proof:evidence",
+    "install:browser-proof": "playwright install chromium",
     "dev": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo dev"
   },
   "devDependencies": {
+    "@playwright/test": "1.55.0",
     "@types/node": "24.13.3",
     "typescript": "npm:@typescript/typescript6@6.0.2",
     "vitest": "4.1.11"
