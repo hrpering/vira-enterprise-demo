@@ -1,0 +1,822 @@
+.vira-booking-flow {
+  margin-top: 16px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e1e4e9;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 22px 70px rgba(20, 29, 51, 0.09);
+}
+
+.vira-booking-flow[hidden] {
+  display: none;
+}
+
+.vira-flow-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 26px 18px;
+  background:
+    radial-gradient(circle at 86% 10%, rgba(255, 213, 0, 0.24), transparent 32%),
+    linear-gradient(135deg, #141e37 0%, #1c2948 100%);
+  color: #ffffff;
+}
+
+.vira-flow-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vira-flow-eyebrow {
+  color: #ffd93d;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vira-flow-copy > strong {
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.15;
+}
+
+.vira-flow-copy p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.vira-live-total {
+  display: flex;
+  min-width: 132px;
+  padding: 10px 13px;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.vira-live-total span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vira-live-total strong {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.vira-journey-rail {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding: 0 26px;
+  border-bottom: 1px solid #eceef2;
+  background: #f9fafb;
+}
+
+.vira-journey-step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  padding: 14px 4px 13px;
+  align-items: center;
+  gap: 7px;
+  color: #9ba1ac;
+}
+
+.vira-journey-step::after {
+  position: absolute;
+  right: 7px;
+  bottom: -1px;
+  left: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: transparent;
+  content: "";
+}
+
+.vira-journey-step > span {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  border: 1px solid #d9dde4;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.vira-journey-step b {
+  overflow: hidden;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vira-journey-step.active {
+  color: #17213c;
+}
+
+.vira-journey-step.active > span {
+  border-color: #ffd500;
+  background: #ffd500;
+}
+
+.vira-journey-step.current::after {
+  background: #ffd500;
+}
+
+.vira-booking-flow > :not(.vira-flow-top):not(.vira-journey-rail) {
+  margin-inline: 26px;
+}
+
+.vira-booking-flow > :last-child {
+  margin-bottom: 26px;
+}
+
+.vira-insight-strip {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 13px 15px;
+  border: 1px solid #efe4a5;
+  border-radius: 14px;
+  background: #fffbea;
+}
+
+.vira-insight-strip strong {
+  color: #17213c;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.vira-insight-strip span {
+  color: #666e7d;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.vira-fare-grid.rich {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 14px;
+}
+
+.vira-fare-option {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  padding: 17px;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid #dfe2e8;
+  border-radius: 17px;
+  background: #ffffff;
+  color: #17213c;
+  text-align: left;
+  transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.vira-fare-option:hover {
+  transform: translateY(-2px);
+  border-color: #c8aa00;
+  box-shadow: 0 14px 28px rgba(22, 31, 56, 0.08);
+}
+
+.vira-fare-option.recommended {
+  border-color: #d3b400;
+  background: linear-gradient(180deg, #fffdf2 0%, #ffffff 55%);
+}
+
+.vira-fare-option-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.vira-fare-option-top > strong {
+  font-size: 17px;
+}
+
+.vira-option-badge {
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: #ffd500;
+  color: #17213c;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vira-fare-price {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vira-fare-price strong {
+  font-size: 18px;
+}
+
+.vira-fare-price span,
+.vira-fare-policy {
+  color: #8a909b;
+  font-size: 9px;
+}
+
+.vira-includes-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 7px;
+  list-style: none;
+}
+
+.vira-includes-list li {
+  position: relative;
+  padding-left: 17px;
+  color: #525a6a;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.vira-includes-list li::before {
+  position: absolute;
+  left: 0;
+  color: #c2a200;
+  content: "✓";
+  font-weight: 900;
+}
+
+.vira-fare-policy {
+  margin: auto 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #eceef2;
+  line-height: 1.4;
+}
+
+.vira-traveller-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.vira-traveller-card,
+.vira-contact-card {
+  padding: 16px;
+  border: 1px solid #e2e5ea;
+  border-radius: 16px;
+  background: #fbfcfd;
+}
+
+.vira-traveller-title {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 9px;
+}
+
+.vira-traveller-title > span,
+.vira-active-traveller > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 9px;
+  background: #17213c;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.vira-traveller-title strong,
+.vira-contact-card > strong {
+  color: #17213c;
+  font-size: 12px;
+}
+
+.vira-contact-card > span {
+  display: block;
+  margin: 3px 0 11px;
+  color: #8b919d;
+  font-size: 9px;
+}
+
+.vira-field-grid {
+  display: grid;
+  gap: 9px;
+}
+
+.vira-field-grid.three {
+  grid-template-columns: 1fr 1fr 0.8fr;
+}
+
+.vira-field-grid.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.vira-field-grid input {
+  min-width: 0;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #dde1e7;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #17213c;
+  font: inherit;
+  font-size: 11px;
+  outline: none;
+}
+
+.vira-field-grid input:focus {
+  border-color: #c2a600;
+  box-shadow: 0 0 0 3px rgba(255, 213, 0, 0.13);
+}
+
+.vira-traveller-form > .vira-primary-button,
+.vira-booking-flow > .vira-primary-button {
+  width: calc(100% - 52px);
+  margin-top: 4px;
+  margin-inline: 26px;
+}
+
+.vira-active-traveller {
+  display: flex;
+  margin-top: 18px;
+  padding: 12px 14px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e3e6eb;
+  border-radius: 14px;
+  background: #f8f9fb;
+}
+
+.vira-active-traveller.baggage {
+  background: #fffbed;
+  border-color: #eee3a8;
+}
+
+.vira-active-traveller > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vira-active-traveller strong {
+  color: #17213c;
+  font-size: 11px;
+}
+
+.vira-active-traveller div span {
+  color: #858c99;
+  font-size: 9px;
+}
+
+.vira-seat-legend {
+  display: flex;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #777f8f;
+  font-size: 8px;
+}
+
+.vira-seat-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vira-seat-legend i {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #d9dde4;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.vira-seat-legend i.front { background: #fff3ad; border-color: #dbc34c; }
+.vira-seat-legend i.legroom { background: #e8f1ff; border-color: #9db9e2; }
+.vira-seat-legend i.occupied { background: #e6e8ec; border-color: #e6e8ec; }
+
+.vira-plane {
+  max-width: 560px;
+  margin: 14px auto 0;
+  padding: 18px 22px 22px;
+  border: 1px solid #dfe3e9;
+  border-radius: 120px 120px 24px 24px;
+  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 18%);
+}
+
+.vira-plane-nose {
+  margin: 0 auto 14px;
+  color: #9aa0ab;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.vira-seat-row {
+  display: grid;
+  grid-template-columns: 23px repeat(3, 1fr) 24px repeat(3, 1fr);
+  gap: 7px;
+  margin-bottom: 7px;
+  align-items: center;
+}
+
+.vira-seat-row-number {
+  color: #a0a6b0;
+  font-size: 8px;
+  text-align: center;
+}
+
+.vira-seat-aisle {
+  width: 24px;
+}
+
+.vira-seat {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  height: 49px;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid #dce0e6;
+  border-radius: 10px 10px 7px 7px;
+  background: #ffffff;
+  color: #17213c;
+}
+
+.vira-seat.front { background: #fff9d8; border-color: #e3cf67; }
+.vira-seat.extra-legroom { background: #f0f6ff; border-color: #abc3e7; }
+.vira-seat.occupied { background: #e8eaee; color: #afb4bc; border-color: #e8eaee; }
+.vira-seat.selected { background: #17213c; color: #ffffff; border-color: #17213c; }
+
+.vira-seat strong { font-size: 9px; }
+.vira-seat span { font-size: 7px; opacity: 0.72; }
+.vira-seat b {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffd500;
+  color: #17213c;
+  font-size: 7px;
+}
+
+.vira-baggage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.vira-bag-option {
+  display: flex;
+  min-height: 160px;
+  padding: 14px;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #e1e4e9;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.vira-bag-option > strong { color: #17213c; font-size: 15px; }
+.vira-bag-option > span { color: #858c98; font-size: 9px; }
+.vira-bag-option > b { margin-top: auto; color: #17213c; font-size: 10px; }
+
+.vira-bag-actions {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.vira-bag-actions button {
+  height: 29px;
+  border: 1px solid #dfe2e7;
+  border-radius: 8px;
+  background: #f7f8fa;
+  color: #17213c;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.vira-bag-actions button:last-child {
+  border-color: #17213c;
+  background: #17213c;
+  color: #ffffff;
+}
+
+.vira-section-title {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vira-section-title strong { color: #17213c; font-size: 12px; }
+.vira-section-title span { color: #959ba6; font-size: 8px; }
+
+.vira-insurance-grid,
+.vira-extra-grid {
+  display: grid;
+  gap: 9px;
+  margin-top: 9px;
+}
+
+.vira-insurance-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.vira-extra-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.vira-insurance-option,
+.vira-extra-option {
+  display: flex;
+  min-height: 112px;
+  padding: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  border: 1px solid #e0e3e8;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #17213c;
+  text-align: left;
+}
+
+.vira-insurance-option.selected,
+.vira-extra-option.selected {
+  border-color: #c5aa00;
+  background: #fffbee;
+  box-shadow: inset 0 0 0 1px rgba(255, 213, 0, 0.35);
+}
+
+.vira-insurance-option strong,
+.vira-extra-option strong { font-size: 11px; }
+.vira-insurance-option span,
+.vira-extra-option span { color: #7f8693; font-size: 9px; line-height: 1.4; }
+.vira-insurance-option b,
+.vira-extra-option b { margin-top: auto; font-size: 9px; }
+
+.vira-review-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(240px, 0.75fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.vira-review-main {
+  display: grid;
+  gap: 10px;
+}
+
+.vira-review-section,
+.vira-price-breakdown {
+  padding: 15px;
+  border: 1px solid #e2e5ea;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.vira-review-section.hero {
+  background: linear-gradient(135deg, #17213c, #263657);
+  color: #ffffff;
+}
+
+.vira-review-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.vira-review-route > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vira-review-route strong { font-size: 17px; }
+.vira-review-route span { color: rgba(255,255,255,.68); font-size: 9px; }
+
+.vira-fare-pill {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #ffd500;
+  color: #17213c !important;
+  font-size: 8px !important;
+  font-weight: 900;
+}
+
+.vira-review-section > strong,
+.vira-price-breakdown > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #17213c;
+  font-size: 11px;
+}
+
+.vira-summary-row {
+  display: flex;
+  padding: 8px 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.vira-summary-row:last-child { border-bottom: 0; }
+.vira-summary-row span { color: #858c98; font-size: 9px; }
+.vira-summary-row strong { color: #17213c; font-size: 9px; text-align: right; }
+
+.vira-price-breakdown {
+  align-self: start;
+  position: sticky;
+  top: 8px;
+  background: #fafbfc;
+}
+
+.vira-grand-total {
+  display: flex;
+  margin: 9px 0 12px;
+  padding: 12px 0 0;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 2px solid #17213c;
+}
+
+.vira-grand-total span { color: #6f7786; font-size: 8px; }
+.vira-grand-total strong { color: #17213c; font-size: 17px; }
+
+.vira-price-breakdown .vira-primary-button {
+  width: 100%;
+}
+
+.vira-payment-boundary-note {
+  margin: 9px 0 0;
+  color: #9298a3;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.vira-handoff-card {
+  display: flex;
+  margin-top: 18px;
+  padding: 20px;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #e2d46f;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #fffbe4 0%, #ffffff 70%);
+}
+
+.vira-handoff-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  place-items: center;
+  border-radius: 14px;
+  background: #ffd500;
+  color: #17213c;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.vira-handoff-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vira-handoff-card strong { color: #17213c; font-size: 15px; }
+.vira-handoff-card p { margin: 0; color: #555d6c; font-size: 10px; line-height: 1.45; }
+.vira-handoff-card span { color: #8b929e; font-size: 8px; line-height: 1.5; }
+
+.vira-flight-pricebox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.vira-flight-pricebox > span {
+  color: #969ca7;
+  font-size: 8px;
+}
+
+.vira-flight-badge {
+  width: max-content;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: #fff5b8;
+  color: #766100;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+@media (max-width: 860px) {
+  .vira-fare-grid.rich,
+  .vira-baggage-grid,
+  .vira-insurance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vira-review-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vira-price-breakdown {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .vira-flow-top {
+    padding: 19px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .vira-live-total {
+    width: 100%;
+  }
+
+  .vira-journey-rail {
+    padding-inline: 10px;
+  }
+
+  .vira-journey-step {
+    justify-content: center;
+  }
+
+  .vira-journey-step b {
+    display: none;
+  }
+
+  .vira-booking-flow > :not(.vira-flow-top):not(.vira-journey-rail) {
+    margin-inline: 16px;
+  }
+
+  .vira-booking-flow > :last-child {
+    margin-bottom: 16px;
+  }
+
+  .vira-fare-grid.rich,
+  .vira-baggage-grid,
+  .vira-insurance-grid,
+  .vira-extra-grid,
+  .vira-field-grid.three,
+  .vira-field-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .vira-insight-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .vira-traveller-form > .vira-primary-button,
+  .vira-booking-flow > .vira-primary-button {
+    width: calc(100% - 32px);
+    margin-inline: 16px;
+  }
+
+  .vira-plane {
+    padding-inline: 12px;
+  }
+
+  .vira-seat-row {
+    gap: 4px;
+  }
+
+  .vira-review-route {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

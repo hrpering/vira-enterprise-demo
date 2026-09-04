@@ -1,0 +1,13 @@
+{
+  "name": "@vira-enterprise-genui/mock-airline-domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index-v2.ts",
+    "./studio-collections": "./src/studio-collections.ts"
+  },
+  "dependencies": {
+    "@vira-enterprise-genui/protocol": "workspace:*"
+  }
+}

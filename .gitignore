@@ -1,0 +1,7 @@
+node_modules/
+.pnpm-store/
+.next/
+.env.local
+.vendor/
+evidence/generated/
+evidence/external-brand-proof.json

@@ -1,0 +1,19 @@
+{
+  "name": "@vira-enterprise-genui/airline-brand-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./studio": "./src/studio.ts",
+    "./base.css": "./styles/base.css",
+    "./booking-flow.css": "./styles/booking-flow.css",
+    "./guidance.css": "./styles/guidance.css"
+  },
+  "dependencies": {
+    "@vira-enterprise-genui/mock-airline-domain": "workspace:*",
+    "@vira-enterprise-genui/protocol": "workspace:*",
+    "@vira-enterprise-genui/runtime-web": "workspace:*",
+    "@vira-enterprise-genui/studio-schema": "workspace:*"
+  }
+}
