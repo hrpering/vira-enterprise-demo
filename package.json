@@ -1,0 +1,23 @@
+{
+  "name": "vira-enterprise-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "bootstrap:vira": "node tooling/bootstrap-vira.mjs",
+    "typecheck": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo typecheck",
+    "test": "vitest run packages/mock-airline-domain/src/index.test.ts tests",
+    "build": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo build",
+    "verify": "pnpm typecheck && pnpm test && pnpm build",
+    "dev": "pnpm --filter @vira-enterprise-genui/pegasus-chat-demo dev"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "vitest": "4.1.11"
+  }
+}
